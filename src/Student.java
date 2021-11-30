@@ -20,7 +20,9 @@ public class Student {
     //计算全部所得钱数
     public void cal_money(){
         int[] a = new int[18];
+        System.out.println("一次最高补助价格：" + Lab.great);
         System.out.println(this.name + "的收入统计");
+        double m;
         for (int i = 0;i< labs.length;i++){
 
             if (labs[i] == null){
@@ -29,28 +31,28 @@ public class Student {
             else {
                 System.out.println(labs[i].getName() + "收入统计：");
                 a = labs[i].getScore(); //分数数组
+                m = 0;
                 for(int j=0;j<18;j++){
-
                     if(a[j]>0 & a[j]<=5){ //5分一下及格
                         //System.out.println(j + money);
-                        money = money + Lab.pass;
-                        System.out.println(j+1 +"周收入:" +money);
+                        m = m + Lab.pass;
+                        System.out.println(j+1 +"周收入:" +m);
                     }
                     else if(a[j]>7 & a[j]<=10){ //7分以上优秀
-                        money = money + Lab.great;
-                        System.out.println(j+1 +"周收入:" +money);
+                        m = m + Lab.great;
+                        System.out.println(j+1 +"周收入:" +m);
                     }
                     else if(a[j]>5 & a[j]<=7){  //其余良好
-                        money = money + Lab.good;
-                        System.out.println(j+1 +"周收入:" +money);
+                        m = m + Lab.good;
+                        System.out.println(j+1 +"周收入:" +m);
                     }
-//                    else{
-//                        System.out.println("输入错误");
-//                        break;
-//                    }
+
                 }
+                System.out.println(labs[i].getName() + "的总共收入" + m);
+                money = m + money;
             }
         }
+
         System.out.println(this.name + "的总共收入" + money);
     }
 

@@ -22,23 +22,23 @@ public class Testing {
         stu2.add_lab(lab3);
 
         //自己评分
-        lab1.setScore();
+//        lab1.setScore();
 //        lab2.setScore();
 //        lab3.setScore();
 
         //默认评分
-//        int[] a= {5,4,5,7,9,8,10,7,5,8,9,7,9,5,7,9,8,6};
-//        int[] b= {5,10,7,5,8,8,7,9,5,7,9,8,6,10,7,5,8,9};
-//        int[] c= {5,6,7,9,8,8,7,9,7,7,9,8,8,10,7,5,7,9};
-//        lab1.setscore(a);
-//        lab2.setscore(b);
-//        lab3.setscore(c);
+        int[] a= {5,4,5,7,9,8,10,7,5,8,9,7,9,5,7,9,8,6};
+        int[] b= {5,10,7,5,8,8,7,9,5,7,9,8,6,10,7,5,8,9};
+        int[] c= {5,6,7,9,8,8,7,9,7,7,9,8,8,10,7,5,7,9};
+        lab1.setscore(a);
+        lab2.setscore(b);
+        lab3.setscore(c);
 
         //算钱,算税后
         stu1.cal_money();
         stu1.cal_tax();
-//        stu2.cal_money();
-//        stu2.cal_tax();
+        stu2.cal_money();
+        stu2.cal_tax();
 
 
 

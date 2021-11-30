@@ -39,7 +39,22 @@ public class Lab {
     static double pass = Math.ceil(great * 0.5); //及格的补助价格
 }
 ```
-2. 评分输入机制
+
+2. 并在Lab类中设置两种构造函数，一种使用默认补助价格，一种可以自定义补助价格。
+```java
+    public Lab(String name,int room){  //使用默认的补助价格
+        this.name = name;
+        this.room = room;
+    }
+
+    public Lab(double buzhu,String name,int room){ //自定义补助价格
+        this.great = buzhu;
+        this.name = name;
+        this.room = room;
+    }
+```
+
+3. 评分输入机制
 ```java
     public void setScore() {
         Scanner in = new Scanner(System.in);
@@ -58,7 +73,7 @@ public class Lab {
     }
 ```
 
-3. 评分机制的异常处理，经过API查询错误类型对应名称，使用了“NoSuchElementException”检验输入是否耗尽,"IllegalStateException"来检验如果此扫描仪已关闭，并在最后添加exception主类，捕捉所有错误。
+4. 评分机制的异常处理，经过API查询错误类型对应名称，使用了“NoSuchElementException”检验输入是否耗尽,"IllegalStateException"来检验如果此扫描仪已关闭，并在最后添加exception主类，捕捉所有错误。
 ```java
     public void setScore() {
         try {
@@ -90,7 +105,7 @@ public class Lab {
         }
 ```
 
-4. cal_money函数，通过遍历学生的实验室列表，将实验室每周的分数都分别按照分数等级计算每周能获得的工资，并且求和。
+5. cal_money函数，通过遍历学生的实验室列表，将实验室每周的分数都分别按照分数等级计算每周能获得的工资，并且求和。
 ```java
     public void cal_money(){
         int[] a = new int[18];
@@ -124,7 +139,7 @@ public class Lab {
     }
 ```
 
-5. 创建类Peizhi，用来存储不能被修改的利率。
+6. 创建类Peizhi，用来存储不能被修改的利率。
 ```java
 public class Peizhi {
     public static final double tax = 0.03;
@@ -133,7 +148,7 @@ public class Peizhi {
 }
 ```
 
-6.cal_tax函数，根据相应利率，计算税后所得。
+7. cal_tax函数，根据相应利率，计算税后所得。
 ```java
     public void cal_tax(){
         if(money<=200){
@@ -149,6 +164,16 @@ public class Peizhi {
 ```
 
 ## 七、运行截图
+1. 后台打分，默认补助价格，多个学生分配多个实验室。
+![]()
+2. 后台打分，自定义补助价格。
+![]()
+3. 自己打分
+![]()
+4. 异常处理
+![]()
+
+
 
 ## 八、感想体悟
 &emsp;&emsp;本次实验个人感觉比上两次要简单，这次实验帮助我更加精细的了解到了static以及final的使用方法和使用情景。
