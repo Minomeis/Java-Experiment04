@@ -60,30 +60,34 @@ public class Lab {
 
 3. 评分机制的异常处理，经过API查询错误类型对应名称，使用了“NoSuchElementException”检验输入是否耗尽,"IllegalStateException"来检验如果此扫描仪已关闭，并在最后添加exception主类，捕捉所有错误。
 ```java
-   public void setScore() {
+    public void setScore() {
         try {
-            Scanner in = new Scanner(System.in);
-            System.out.println("请打分");
-            //int[] a = new int[18];
-            for (int i = 0; i < 18; i++) {
-                System.out.println("第" + (i + 1) + "周:");
-                score[i] = in.nextInt();
-                if(score[i]>0 & score[i]<=10){
-                    continue;
-                }
-                else{
-                    System.out.println("输入错误");
-                    break;
-                }
-            }
+        Scanner in = new Scanner(System.in);
+        System.out.println("请打分");
+        //int[] a = new int[18];
+        for (int i = 0; i < 18; i++) {
+        System.out.println("第" + (i + 1) + "周:");
+        score[i] = in.nextInt();
+        if(score[i]>0 & score[i]<=10){
+        continue;
         }
-        catch (NumberFormatException e){
-            System.out.println("数据结构异常");
+        else{
+        System.out.println("输入错误");
+        break;
         }
-        catch (Exception e){
-            System.out.println("异常");
         }
-    }
+        }
+        catch (NoSuchElementException in){
+        System.out.println("输入耗尽");
+        }
+        catch (IllegalStateException in){
+        System.out.println("此扫描仪已关闭");
+        }
+        catch (Exception n){
+        System.out.println("异常");
+        n.printStackTrace();
+        }
+        }
 ```
 
 4. cal_money函数，通过遍历学生的实验室列表，将实验室每周的分数都分别按照分数等级计算每周能获得的工资，并且求和。
