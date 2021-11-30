@@ -165,13 +165,13 @@ public class Peizhi {
 
 ## 七、运行截图
 1. 后台打分，默认补助价格，多个学生分配多个实验室。
-![]()
+![](https://github.com/Minomeis/Java-Experiment04/blob/master/img/1.png)
 2. 后台打分，自定义补助价格。
-![]()
+![](https://github.com/Minomeis/Java-Experiment04/blob/master/img/change_buzhu.png)
 3. 自己打分
-![]()
+![](https://github.com/Minomeis/Java-Experiment04/blob/master/img/zijidafen.png)
 4. 异常处理
-![]()
+![](https://github.com/Minomeis/Java-Experiment04/blob/master/img/baocuo.jpg)
 
 
 
