@@ -1,3 +1,4 @@
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Lab {
@@ -45,8 +46,11 @@ public class Lab {
                 }
             }
         }
-        catch (NumberFormatException in){
-            System.out.println("数据结构异常");
+        catch (NoSuchElementException in){
+            System.out.println("输入耗尽");
+        }
+        catch (IllegalStateException in){
+            System.out.println("此扫描仪已关闭");
         }
         catch (Exception n){
             System.out.println("异常");

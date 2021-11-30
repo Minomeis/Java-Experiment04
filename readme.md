@@ -58,7 +58,7 @@ public class Lab {
     }
 ```
 
-3. 评分机制的异常处理，经过官网查询错误类型对应名称，使用了“”来进行具体的错误处理，并在最后添加exception主类，捕捉所有错误。
+3. 评分机制的异常处理，经过API查询错误类型对应名称，使用了“NoSuchElementException”检验输入是否耗尽,"IllegalStateException"来检验如果此扫描仪已关闭，并在最后添加exception主类，捕捉所有错误。
 ```java
    public void setScore() {
         try {
